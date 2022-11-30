@@ -1,15 +1,13 @@
 import { AlgoliaSearchIndex } from '@ircsignpost/signpost-base/dist/src/search-common';
 import { LatLngExpression } from 'leaflet';
 
-export const SITE_TITLE = 'TODO';
+export const SITE_TITLE = 'Refugee.info Hungary';
 
 // TODO: add the country id of the instance to fetch the data from the cms for the service-map;
-export const COUNTRY_ID = 123;
+export const COUNTRY_ID = 11;
 
 // TODO: add the default coords for the center of the map
-export const MAP_DEFAULT_COORDS: LatLngExpression = [
-  34.45830721078611, 65.09457416213823,
-];
+export const MAP_DEFAULT_COORDS: LatLngExpression = [47.4979, 19.0402];
 
 // Cache statically generated pages for 1 hour. The timeout was chosen
 // arbitrarily. Our website has static, non-urgent resources, so we probably do
@@ -50,6 +48,9 @@ export const CATEGORIES_TO_HIDE: number[] = [
 // Keep in sync with locales configured in /next.config.js.
 export const DYNAMIC_CONTENT_LOCALES: { [key: string]: number } = {
   'en-us': 1, // English locale id
+  hu: 1009, // Hungarian locale id
+  ru: 27, // Russian locale id
+  uk: 1173, // Ukranian locale id
   // TODO: Add any other IDs needed
 };
 
@@ -72,8 +73,9 @@ export const ALGOLIA_SEARCH_API_KEY = '0d9093280e7b2bc2b6ca12ed4180fd0a';
 
 // TODO: create Algolia indexes for Articles and Queries and replace the names here.
 // See README for more info on how to create indexes.
-export const ALGOLIA_ARTICLE_INDEX_NAME = 'TODO'; // TODO: replace article index name, e.g. 'zendesk_signpost-afghanistan_articles'.
-export const ALGOLIA_QUERY_INDEX_NAME = 'TODO'; // TODO: replace query index name, e.g. 'zendesk_signpost-afghanistan_articles_query_suggestions'.
+export const ALGOLIA_ARTICLE_INDEX_NAME = 'zendesk_refugeeinfohungary_articles'; // TODO: replace article index name, e.g. 'zendesk_signpost-afghanistan_articles'.
+export const ALGOLIA_QUERY_INDEX_NAME =
+  'zendesk_refugeeinfohungary_articles_query_suggestions'; // TODO: replace query index name, e.g. 'zendesk_signpost-afghanistan_articles_query_suggestions'.
 
 export const SEARCH_BAR_INDEX: AlgoliaSearchIndex = {
   appId: ALGOLIA_SEARCH_APP_ID,
