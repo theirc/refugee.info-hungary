@@ -26,8 +26,6 @@ const langs: Lang[] = [
     langShort: 'uk',
     langLong: 'Українська',
   },
-
-  // TODO: Add supported languages.
 ];
 
 /** The locale selection page.

@@ -11,8 +11,6 @@ export const LOCALES: { [key: string]: Locale } = {
   hu: { url: 'hu', direction: 'ltr', name: 'Magyar' },
   ru: { url: 'ru', direction: 'ltr', name: 'Русский' },
   uk: { url: 'uk', direction: 'ltr', name: 'Українська' },
-
-  // TODO
 };
 
 export const LOCALE_CODES_TO_CANONICAL_LOCALE_CODES: { [key: string]: string } =
@@ -22,19 +20,18 @@ export const LOCALE_CODES_TO_CANONICAL_LOCALE_CODES: { [key: string]: string } =
     hu: 'hu',
     ru: 'ru',
     uk: 'uk',
-    // TODO
   };
 
 // Returns the effective locale given locale code.
 //
 // This function defaults to en-us in case we ended up in a situation where the locale is not recognized. It's defensive programming as this shouldn't happen.
 export function getLocaleFromCode(code: string): Locale {
-  return LOCALES[code] ?? LOCALES['en-us'];
+  return LOCALES[code] ?? LOCALES['hu'];
 }
 
 /* Returns a Zendesk locale id for the current locale.
  If there is no mapping for the requested locale, return the deafault id 
  for en-us locale. */
 export const getZendeskLocaleId = (currentLocale: Locale): number => {
-  return DYNAMIC_CONTENT_LOCALES[currentLocale.url] || 1;
+  return DYNAMIC_CONTENT_LOCALES[currentLocale.url] || 1009;
 };
