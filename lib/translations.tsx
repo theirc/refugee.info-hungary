@@ -39,7 +39,6 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
 export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   // Header banner and social media strings.
   'ri_hungary_mission_statement',
-
   'default_banner_social_media_title',
   'default_banner_social_media_description',
   'default_banner_facebook_title',

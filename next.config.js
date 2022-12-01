@@ -6,7 +6,7 @@ const nextConfig = {
   swcMinify: true,
   // Keep in sync with locales configured in /lib/locale.ts.
   i18n: {
-    locales: ['default', 'en-us', 'hu', 'ru', 'uk' /* TODO */],
+    locales: ['default', 'en-us', 'hu', 'ru', 'uk'],
     defaultLocale: 'default',
     localeDetection: false,
   },
@@ -30,7 +30,6 @@ module.exports = withLess({
       // See full list of Ant styles here:
       // https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
       modifyVars: {
-        // TODO: Update theme colors
         'primary-color': '#38393C',
         'secondary-color': '#242629',
         'accent-color': '#FFB500',

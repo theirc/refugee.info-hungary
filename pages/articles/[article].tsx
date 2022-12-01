@@ -53,8 +53,6 @@ import {
 } from '../../lib/translations';
 import { getSiteUrl, getZendeskMappedUrl, getZendeskUrl } from '../../lib/url';
 
-// TODO Use real Zendesk API implemetation.
-
 interface ArticleProps {
   pageTitle: string;
   articleTitle: string;
