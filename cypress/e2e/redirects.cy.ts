@@ -2,10 +2,10 @@ describe('Redirects', () => {
   it('Legacy article form slug should navigate to the localized article page', () => {
     cy.visit(
       encodeURI(
-        'http://localhost:3003/hc/en-us/articles/7807090811293-some-slug'
+        'http://localhost:3003/hc/en-us/articles/7986337445021-some-slug'
       )
     );
-    cy.url().should('eq', 'http://localhost:3003/en-us/articles/7807090811293');
+    cy.url().should('eq', 'http://localhost:3003/en-us/articles/7986337445021');
   });
 
   it('Default home page visit should redirect to locale select', () => {
