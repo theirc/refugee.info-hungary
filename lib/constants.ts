@@ -24,7 +24,10 @@ export const USE_CAT_SEC_ART_CONTENT_STRUCTURE = false;
 
 // A mapping from category ID to a Material icon for that category.
 export const CATEGORY_ICON_NAMES: { [key: string]: string } = {
-  '7986310684829': 'flight_land', // Placeholder
+  '7986310684829': 'flight_land',
+  '7807042058269': 'info',
+  '4403821926551': 'volunteer_activism',
+  '4403827932055': 'health_and_safety',
 };
 
 // A mapping from section ID to a Material icon for that section.
