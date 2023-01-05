@@ -49,7 +49,7 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'ri_hungary_messenger_link',
   // Main body strings.
   'default_information_title',
-  'default_information_description',
+  'ri_hungary_information_description',
   'default_service_map_title',
   'default_service_map_description',
   'default_service_map_select_region',
@@ -148,7 +148,7 @@ export function populateCategoriesSectionStrings(dynamicContent: {
 }): CardsListStrings {
   return {
     title: dynamicContent['default_information_title'],
-    description: dynamicContent['default_information_description'],
+    description: dynamicContent['ri_hungary_information_description'],
   };
 }
 
