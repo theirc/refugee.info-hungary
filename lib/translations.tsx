@@ -43,9 +43,9 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_banner_social_media_description',
   'default_banner_facebook_title',
   'default_banner_messenger_title',
-  'default_banner_whatsapp_title',
+  'default_banner_telegram_title',
   'ri_hungary_facebook_link',
-  'ri_hungary_whatsapp_link',
+  'ri_hungary_telegram_link',
   'ri_hungary_messenger_link',
   // Main body strings.
   'default_information_title',
@@ -95,13 +95,13 @@ export function populateSocialMediaLinks(dynamicContent: {
       title: dynamicContent['default_banner_facebook_title'],
       href: dynamicContent['ri_hungary_facebook_link'],
     },
-    whatsappLink: {
-      title: dynamicContent['default_banner_whatsapp_title'],
-      href: dynamicContent['ri_hungary_whatsapp_link'],
-    },
     messengerLink: {
       title: dynamicContent['default_banner_messenger_title'],
       href: dynamicContent['ri_hungary_messenger_link'],
+    },
+    telegramLink: {
+      title: dynamicContent['default_banner_telegram_title'],
+      href: dynamicContent['ri_hungary_telegram_link'],
     },
   };
 }
