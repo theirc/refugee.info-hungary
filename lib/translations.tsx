@@ -34,6 +34,10 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_download',
   'default_last_updated',
   'default_article_reader_title',
+  'default_banner_link_share_title',
+  'default_filter_label',
+  'default_most_recent_filter_option',
+  'default_most_popular_filter_option',
 ];
 
 export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
@@ -174,6 +178,7 @@ export function getShareButtonStrings(dynamicContent: {
   return {
     label: dynamicContent['default_share'],
     notificationText: dynamicContent['default_share_notification_text'],
+    linkShareButton: dynamicContent['default_banner_link_share_title'],
   };
 }
 
@@ -312,5 +317,15 @@ export function populateArticlePageStrings(dynamicContent: {
     cookieBannerStrings: populateCookieBannerStrings(dynamicContent),
     articleErrorStrings: generateArticleErrorProps(dynamicContent),
     lastUpdatedLabel: getLastUpdatedLabel(dynamicContent),
+  };
+}
+
+export function populateFilterSelectStrings(dynamicContent: {
+  [key: string]: string;
+}) {
+  return {
+    filterLabel: dynamicContent['default_filter_label'],
+    mostRecent: dynamicContent['default_most_recent_filter_option'],
+    mostPopular: dynamicContent['default_most_popular_filter_option'],
   };
 }
