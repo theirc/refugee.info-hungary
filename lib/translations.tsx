@@ -316,3 +316,13 @@ export function populateArticlePageStrings(dynamicContent: {
     lastUpdatedLabel: getLastUpdatedLabel(dynamicContent),
   };
 }
+
+export function populateFilterSelectStrings(dynamicContent: {
+  [key: string]: string;
+}) {
+  return {
+    filterLabel: dynamicContent['default_filter_label'],
+    mostRecent: dynamicContent['default_most_recent_filter_option'],
+    mostPopular: dynamicContent['default_most_popular_filter_option'],
+  };
+}
