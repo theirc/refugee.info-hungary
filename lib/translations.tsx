@@ -35,6 +35,9 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_last_updated',
   'default_article_reader_title',
   'default_banner_link_share_title',
+  'default_filter_label',
+  'default_most_recent_filter_option',
+  'default_most_popular_filter_option',
 ];
 
 export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
