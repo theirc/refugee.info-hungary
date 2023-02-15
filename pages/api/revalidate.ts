@@ -33,12 +33,24 @@ export default async function handler(
 
     let articlesToRevalidate: ZendeskArticleTranslation[] = [];
 
-    for (let article of articles) {
+    const publishedArticles = articles.filter((x) => x.draft);
+
+    if (!publishedArticles.length) {
+      return res.status(200).json('nothing to revalidate');
+    }
+
+    for (let article of publishedArticles) {
       const translations = await getArticleTranslations(
         getZendeskUrl(),
         article.id
       );
-      for (let translation of translations) {
+
+      const publishedTranslations = translations.filter((x) => x.draft);
+      if (!publishedTranslations.length) {
+        return res.status(200).json('nothing to revalidate');
+      }
+
+      for (let translation of publishedTranslations) {
         if (new Date(translation.updated_at) >= time) {
           articlesToRevalidate.push(translation);
         }
