@@ -21,6 +21,15 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'refugeeinfohungary.zendesk.com',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 module.exports = withLess({
