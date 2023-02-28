@@ -1,4 +1,5 @@
 const withLess = require('next-with-less');
+const pack = require('./package.json');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -26,9 +27,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'refugeeinfohungary.zendesk.com',
-        pathname: '/**',
       },
     ],
+  },
+  publicRuntimeConfig: {
+    version: pack.dependencies['@ircsignpost/signpost-base'],
   },
 };
 
