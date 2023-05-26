@@ -178,6 +178,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const services = await fetchServices(COUNTRY_ID, currentLocale.url);
   services.sort((a, b) => a.name.normalize().localeCompare(b.name.normalize()));
 
+  const defaultImage = '/public/ri-hungary-logo.svg';
+
   return {
     props: {
       currentLocale,
@@ -195,6 +197,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       categories,
       aboutUsTextHtml,
       footerLinks,
+      defaultImage,
     },
     revalidate: REVALIDATION_TIMEOUT_SECONDS,
   };
