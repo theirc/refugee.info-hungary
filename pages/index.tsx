@@ -82,6 +82,7 @@ const Home: NextPage<HomeProps> = ({
   footerLinks,
 }) => {
   const { publicRuntimeConfig } = getConfig();
+  const openGraphImageUrl = '/public/ri-hungary-logo.svg';
 
   return (
     <HomePage
@@ -101,6 +102,7 @@ const Home: NextPage<HomeProps> = ({
       categories={categories}
       footerLinks={footerLinks}
       signpostVersion={publicRuntimeConfig?.version}
+      openGraphImage={openGraphImageUrl}
       cookieBanner={
         <CookieBanner
           strings={strings.cookieBannerStrings}
