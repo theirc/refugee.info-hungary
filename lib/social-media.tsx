@@ -4,6 +4,8 @@ import { SocialMediaProps } from '@ircsignpost/signpost-base/dist/src/header-ban
 import facebookImage from '../public/facebook.svg';
 import messengerImage from '../public/messenger.svg';
 import telegramImage from '../public/telegram.svg';
+import telephoneImage from '../public/telephone.svg';
+import viberImage from '../public/viber.svg';
 
 export interface SocialMediaLink {
   title: string;
@@ -15,6 +17,8 @@ export interface SocialMediaLinks {
   facebookLink: SocialMediaLink;
   telegramLink: SocialMediaLink;
   messengerLink: SocialMediaLink;
+  telephoneLink: SocialMediaLink;
+  viberLink: SocialMediaLink;
 }
 
 /**
@@ -35,6 +39,14 @@ export function getSocialMediaProps(
     {
       ...socialMediaLinks.messengerLink,
       image: messengerImage,
+    },
+    {
+      ...socialMediaLinks.telephoneLink,
+      image: telephoneImage,
+    },
+    {
+      ...socialMediaLinks.viberLink,
+      image: viberImage,
     },
   ];
 }
