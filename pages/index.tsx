@@ -82,8 +82,8 @@ const Home: NextPage<HomeProps> = ({
   footerLinks,
 }) => {
   const { publicRuntimeConfig } = getConfig();
-  const siteUrl = 'https://hungary.refugee.info';
-  const openGraphImageUrl = `${siteUrl}/public/refugeeinfo-hungary-logo.png`;
+  const openGraphImageUrl =
+    'https://hungary.refugee.info/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frefugeeinfo-hungary-logo.0be5b900.png&w=1920&q=75';
 
   return (
     <HomePage
