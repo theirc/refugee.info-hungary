@@ -1,6 +1,6 @@
 import CategoryPage, {
   CategoryStrings,
-  getSection,
+  getCategorySection,
   getSectionsForCategory,
 } from '@ircsignpost/signpost-base/dist/src/category-page';
 import CookieBanner from '@ircsignpost/signpost-base/dist/src/cookie-banner';
@@ -85,7 +85,7 @@ export default function Category({
   const { publicRuntimeConfig } = getConfig();
 
   const handleSectionFilterChange = async (val: number) => {
-    const SECTION = await getSection(
+    const SECTION = await getCategorySection(
       currentLocale,
       getZendeskUrl(),
       val,
@@ -98,7 +98,7 @@ export default function Category({
 
   const handleSelectFilterChange = async (val: string) => {
     if (selectedSectionId) {
-      const SECTION = await getSection(
+      const SECTION = await getCategorySection(
         currentLocale,
         getZendeskUrl(),
         selectedSectionId,
