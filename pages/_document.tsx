@@ -8,6 +8,12 @@ function Document() {
           name="google-site-verification"
           content="BeEC90eQfMtahevj2cqiyQqF6oREYZcP5zlHnCgrQeE"
         />
+        <meta
+          property="og:image:type"
+          content="'https://hungary.refugee.info/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frefugeeinfo-hungary-logo.0be5b900.png&w=1920&q=75';"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <script
           src="https://kit.fontawesome.com/027db3ea3f.js"
           crossOrigin="anonymous"
