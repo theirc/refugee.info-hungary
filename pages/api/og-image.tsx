@@ -2,7 +2,7 @@ import { ImageResponse } from '@vercel/og';
 import Image from 'next/image';
 
 export const config = {
-  runtime: 'edge',
+  runtime: 'experimental-edge',
 };
 
 const generateOGImage = async () => {
