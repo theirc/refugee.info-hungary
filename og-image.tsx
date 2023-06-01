@@ -7,7 +7,7 @@ export const config = {
 
 const generateOGImage = async () => {
   const image = await fetch(
-    'https://hungary.refugee.info//public/refugeeinfo-hungary-logo.png'
+    'https://hungary.refugee.info/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frefugeeinfo-hungary-logo.0be5b900.png'
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
