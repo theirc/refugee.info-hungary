@@ -8,6 +8,12 @@ function Document() {
           name="google-site-verification"
           content="BeEC90eQfMtahevj2cqiyQqF6oREYZcP5zlHnCgrQeE"
         />
+        <meta property="og:title" content="Refugee Info Hungry" />
+        <meta property="og:description" content="Refugee Info Hungry website" />
+        <meta
+          property="og:image"
+          content="https://hungary.refugee.info//public/refugeeinfo-hungary-logo.png"
+        />
         <script
           src="https://kit.fontawesome.com/027db3ea3f.js"
           crossOrigin="anonymous"
