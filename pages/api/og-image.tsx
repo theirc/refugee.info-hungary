@@ -2,12 +2,12 @@ import { ImageResponse } from '@vercel/og';
 import Image from 'next/image';
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'nodejs',
 };
 
 const generateOGImage = async () => {
   const image = await fetch(
-    'https://hungary.refugee.info/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frefugeeinfo-hungary-logo.0be5b900.png'
+    'https://hungary.refugee.info/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frefugeeinfo-hungary-logo.0be5b900.png&w=3840&q=75'
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
