@@ -12,7 +12,7 @@ function Document() {
         <meta property="og:description" content="Refugee Info Hungry website" />
         <meta
           property="og:image"
-          content="https://hungary.refugee.info/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frefugeeinfo-hungary-logo.0be5b900.png"
+          content="https://hungary.refugee.info/api/og-image"
         />
         <script
           src="https://kit.fontawesome.com/027db3ea3f.js"
