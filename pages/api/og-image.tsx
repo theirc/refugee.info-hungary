@@ -11,7 +11,7 @@ export default async function handler() {
       <div
         style={{
           display: 'flex',
-          background: '#000000',
+          background: '#38393C',
           width: '100%',
           height: '100%',
           flexDirection: 'column',

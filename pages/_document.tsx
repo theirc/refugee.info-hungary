@@ -8,8 +8,11 @@ function Document() {
           name="google-site-verification"
           content="BeEC90eQfMtahevj2cqiyQqF6oREYZcP5zlHnCgrQeE"
         />
-        <meta property="og:title" content="Refugee Info Hungry" />
-        <meta property="og:description" content="Refugee Info Hungry website" />
+        <meta property="og:title" content="Refugee Info Hungary" />
+        <meta
+          property="og:description"
+          content="Refugee Info Hungary website"
+        />
         <meta
           property="og:image"
           content="https://hungary.refugee.info/api/og-image"
