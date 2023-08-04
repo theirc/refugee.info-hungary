@@ -29,6 +29,7 @@ import {
   COUNTRY_ID,
   GOOGLE_ANALYTICS_IDS,
   MAP_DEFAULT_COORDS,
+  MENU_CATEGORIES_TO_HIDE,
   REVALIDATION_TIMEOUT_SECONDS,
   SEARCH_BAR_INDEX,
   SECTION_ICON_NAMES,
@@ -142,6 +143,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     );
   }
 
+  const menuCategories: ZendeskCategory[] = (
+    await getCategories(currentLocale, getZendeskUrl())
+  ).filter((c) => !MENU_CATEGORIES_TO_HIDE.includes(c.id));
+
   const aboutUsArticle = await getArticle(
     currentLocale,
     ABOUT_US_ARTICLE_ID,
@@ -153,13 +158,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 
   const menuOverlayItems = getMenuItems(
     populateMenuOverlayStrings(dynamicContent),
-    categories,
+    menuCategories,
     !!aboutUsArticle
   );
 
   const footerLinks = getFooterItems(
     populateMenuOverlayStrings(dynamicContent),
-    categories
+    menuCategories
   );
 
   const strings = populateHomePageStrings(dynamicContent);

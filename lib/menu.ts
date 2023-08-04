@@ -24,6 +24,15 @@ export function getFooterItems(
 ): MenuOverlayItem[] {
   let items: MenuOverlayItem[] = [];
   items.push({ key: 'home', label: strings.home, href: '/' });
+  for (const category of categories as ZendeskCategory[]) {
+    if (category?.id === 10159110917917) {
+      items.push({
+        key: category.id.toString(),
+        label: category.name,
+        href: '/#service-map',
+      });
+    }
+  }
   items.push({
     key: 'about',
     label: strings.about,
@@ -44,6 +53,15 @@ export function getMenuItems(
   } else {
     addMenuItemsInformation(items, strings, categories as ZendeskCategory[]);
   }
+  for (const category of categories as ZendeskCategory[]) {
+    if (category?.id === 10159110917917) {
+      items.push({
+        key: category.id.toString(),
+        label: category.name,
+        href: '/#service-map',
+      });
+    }
+  }
   if (includeAbout) {
     items.push({
       key: 'about',
@@ -59,17 +77,25 @@ function addMenuItemsCategories(
   categories: CategoryWithSections[]
 ) {
   for (const { category, sections } of categories) {
-    items.push({
-      key: category.id.toString(),
-      label: category.name,
-      children: sections.map((section) => {
-        return {
-          key: section.id.toString(),
-          label: section.name,
-          href: '/sections/' + section.id.toString(),
-        };
-      }),
-    });
+    if (category.id === 10159110917917) {
+      items.push({
+        key: category.id.toString(),
+        label: category.name,
+        href: '/#service-map',
+      });
+    } else {
+      items.push({
+        key: category.id.toString(),
+        label: category.name,
+        children: sections.map((section) => {
+          return {
+            key: section.id.toString(),
+            label: section.name,
+            href: '/sections/' + section.id.toString(),
+          };
+        }),
+      });
+    }
   }
 }
 

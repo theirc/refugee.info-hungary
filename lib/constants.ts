@@ -33,6 +33,9 @@ export const CATEGORY_ICON_NAMES: { [key: string]: string } = {
   '8020543061277': 'home',
   '8000000542109': 'description',
   '7807042058269': 'info',
+  '8687992771613': 'pets',
+  '8687821215901': 'work',
+  '11140997203485': 'church',
 };
 
 // A mapping from section ID to a Material icon for that section.
@@ -41,8 +44,9 @@ export const SECTION_ICON_NAMES: { [key: string]: string } = {
 };
 
 // A list of category IDs that the site should not display.
-export const CATEGORIES_TO_HIDE: number[] = [8351908341533];
+export const CATEGORIES_TO_HIDE: number[] = [8351908341533, 10159110917917];
 
+export const MENU_CATEGORIES_TO_HIDE: number[] = [8351908341533];
 // A map from a locale code to Zendesk locale id used for dynamic content translations.
 // https://developer.zendesk.com/api-reference/ticketing/account-configuration/locales/
 // Keep in sync with locales configured in /next.config.js.
