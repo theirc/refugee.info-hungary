@@ -16,6 +16,8 @@ import {
 export interface CustomMenuOverlayStrings extends MenuOverlayStrings {
   information: string;
   about: string;
+  feedback_title: string;
+  feedback: string;
 }
 
 export function getFooterItems(
@@ -48,6 +50,11 @@ export function getMenuItems(
 ): MenuOverlayItem[] {
   let items: MenuOverlayItem[] = [];
   items.push({ key: 'home', label: strings.home, href: '/' });
+  items.push({
+    key: 'Feedback Survey',
+    label: strings.feedback_title,
+    href: String(strings.feedback),
+  });
   if (USE_CAT_SEC_ART_CONTENT_STRUCTURE) {
     addMenuItemsCategories(items, categories as CategoryWithSections[]);
   } else {
