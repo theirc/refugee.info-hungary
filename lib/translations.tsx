@@ -24,6 +24,8 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_menu_home_title',
   'default_information_title',
   'default_menu_about_title',
+  'ri_czechia_feedback_survey_title',
+  'ri_hungary_feedback_survey',
   // Cookie banner strings.
   'default_cookie_banner',
   'default_accept',
@@ -266,6 +268,8 @@ export function populateMenuOverlayStrings(dynamicContent: {
     home: dynamicContent['default_menu_home_title'],
     information: dynamicContent['default_information_title'],
     about: dynamicContent['default_menu_about_title'],
+    feedback: dynamicContent['ri_hungary_feedback_survey'],
+    feedback_title: dynamicContent['ri_czechia_feedback_survey_title'],
   };
 }
 
