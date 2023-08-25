@@ -64,6 +64,7 @@ export const ZENDESK_AUTH_HEADER = {
 export const GOOGLE_ANALYTICS_IDS = [
   process.env.NEXT_PUBLIC_GA_ID ?? '',
   process.env.NEXT_PUBLIC_GA4_ID ?? '',
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ?? '',
 ];
 
 // Algolia search app ID, Search API key and search index name:
