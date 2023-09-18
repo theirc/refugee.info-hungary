@@ -4,7 +4,7 @@ const pack = require('./package.json');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
   // Keep in sync with locales configured in /lib/locale.ts.
   i18n: {
     locales: ['default', 'en-us', 'hu', 'ru', 'uk'],
@@ -32,6 +32,15 @@ const nextConfig = {
   },
   publicRuntimeConfig: {
     version: pack.dependencies['@ircsignpost/signpost-base'],
+  },
+  webpack: (config) => {
+    config.snapshot = {
+      ...(config.snapshot ?? {}),
+      // Add all node_modules but @next module to managedPaths
+      // Allows for hot refresh of changes to @next module
+      managedPaths: [/^(.+?[\\/]node_modules[\\/])(?!@next)/],
+    };
+    return config;
   },
 };
 
