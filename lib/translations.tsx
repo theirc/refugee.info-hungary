@@ -13,6 +13,7 @@ import { SearchBarStrings } from '@ircsignpost/signpost-base/dist/src/search-bar
 import { SearchResultsPageStrings } from '@ircsignpost/signpost-base/dist/src/search-results-page';
 import { SearchResultsStrings } from '@ircsignpost/signpost-base/dist/src/search-results-page-content';
 import { SectionStrings } from '@ircsignpost/signpost-base/dist/src/section-page';
+import { ServiceContentStrings } from '@ircsignpost/signpost-base/dist/src/service-content';
 import { ServiceMapStrings } from '@ircsignpost/signpost-base/dist/src/service-map';
 import { ServicePageStrings } from '@ircsignpost/signpost-base/dist/src/service-page';
 import { ShareButtonStrings } from '@ircsignpost/signpost-base/dist/src/share-button';
@@ -44,6 +45,23 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_most_recent_filter_option',
   'default_most_popular_filter_option',
   'default_home_disclaimer',
+  'default_opening_hours_label',
+  'default_address_label',
+  'default_description_label',
+  'default_banner_facebook_title',
+  'default_banner_whatsapp_title',
+  'default_skype_label',
+  'default_signal_label',
+  'default_banner_telephone_title',
+  'default_linkedin_label',
+  'default_banner_telegram_title',
+  'default_monday_label',
+  'default_tuesday_label',
+  'default_wednesday_label',
+  'default_thursday_label',
+  'default_friday_label',
+  'default_saturday_label',
+  'default_sunday_label',
 ];
 
 export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
@@ -186,6 +204,7 @@ export function populateServiceMapStrings(dynamicContent: {
       informationTooltip: dynamicContent['default_distance_away_tooltip'],
     },
     popupStrings: populatePopupStrings(dynamicContent),
+    labelSearchInput: { label: '' },
   };
 }
 
@@ -403,11 +422,40 @@ export function populateServicePageStrings(dynamicContent: {
   [key: string]: string;
 }): ServicePageStrings {
   return {
-    serviceContentStrings: populateArticleContentStrings(dynamicContent),
+    serviceContentStrings: populateServiceContentStrings(dynamicContent),
     searchBarStrings: populateSearchBarStrings(dynamicContent),
     cookieBannerStrings: populateCookieBannerStrings(dynamicContent),
     serviceErrorStrings: generateArticleErrorProps(dynamicContent),
     lastUpdatedLabel: getLastUpdatedLabel(dynamicContent),
     footerStrings: populateFooterStrings(dynamicContent),
+  };
+}
+
+export function populateServiceContentStrings(dynamicContent: {
+  [key: string]: string;
+}): ServiceContentStrings {
+  return {
+    commonStrings: populateArticleContentStrings(dynamicContent),
+    openingHoursLabelStrings: dynamicContent['default_opening_hours_label'],
+    addressString: dynamicContent['default_address_label'],
+    descriptionString: dynamicContent['default_description_label'],
+    publicContactInformationStrings: {
+      Facebook: dynamicContent['default_banner_facebook_title'],
+      Whatsapp: dynamicContent['default_banner_whatsapp_title'],
+      Skype: dynamicContent['default_skype_label'],
+      Signal: dynamicContent['default_signal_label'],
+      Phone: dynamicContent['default_banner_telephone_title'],
+      LinkedIn: dynamicContent['default_linkedin_label'],
+      Telegram: dynamicContent['default_banner_telegram_title'],
+    },
+    openingHoursStrings: {
+      Monday: dynamicContent['default_monday_label'],
+      Tuesday: dynamicContent['default_tuesday_label'],
+      Wednesday: dynamicContent['default_wednesday_label'],
+      Thursday: dynamicContent['default_thursday_label'],
+      Friday: dynamicContent['default_friday_label'],
+      Saturday: dynamicContent['default_saturday_label'],
+      Sunday: dynamicContent['default_sunday_label'],
+    },
   };
 }
