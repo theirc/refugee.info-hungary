@@ -105,6 +105,7 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_all_populations_option',
   'default_all_accessibilities_option',
   'default_distance_away_tooltip',
+  'default_seach_input_text',
   'default_contact_button_label',
   'default_view_service_label',
 ];
@@ -204,7 +205,7 @@ export function populateServiceMapStrings(dynamicContent: {
       informationTooltip: dynamicContent['default_distance_away_tooltip'],
     },
     popupStrings: populatePopupStrings(dynamicContent),
-    labelSearchInput: { label: '' },
+    labelSearchInput: { label: dynamicContent['default_seach_input_text'] },
   };
 }
 
