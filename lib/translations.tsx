@@ -60,7 +60,6 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_banner_viber_title',
   'default_skype_label',
   'default_signal_label',
-  'default_banner_telephone_title',
   'default_linkedin_label',
   'default_monday_label',
   'default_tuesday_label',
@@ -79,10 +78,8 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_banner_facebook_title',
   'default_banner_messenger_title',
   'default_banner_telegram_title',
-  'default_banner_telephone_title',
   'default_banner_viber_title',
   'default_banner_tiktok_title',
-  'ri_hungary_telephone_link',
   'ri_hungary_facebook_link',
   'ri_hungary_telegram_link',
   'ri_hungary_messenger_link',
@@ -154,10 +151,6 @@ export function populateSocialMediaLinks(dynamicContent: {
     telegramLink: {
       title: dynamicContent['default_banner_telegram_title'],
       href: dynamicContent['ri_hungary_telegram_link'],
-    },
-    telephoneLink: {
-      title: dynamicContent['default_banner_telephone_title'],
-      href: dynamicContent['ri_hungary_telephone_link'],
     },
     viberLink: {
       title: dynamicContent['default_banner_viber_title'],
@@ -452,7 +445,6 @@ export function populateServiceContentStrings(dynamicContent: {
       Facebook: dynamicContent['default_banner_facebook_title'],
       Instagram: dynamicContent['default_banner_instagram_title'],
       LinkedIn: dynamicContent['default_linkedin_label'],
-      Telephone: dynamicContent['default_banner_telephone_title'],
       Signal: dynamicContent['default_signal_label'],
       Skype: dynamicContent['default_skype_label'],
       Telegram: dynamicContent['default_banner_telegram_title'],
