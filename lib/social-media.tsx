@@ -5,8 +5,6 @@ import facebookImage from '../public/facebook.svg';
 import messengerImage from '../public/messenger.svg';
 import telegramImage from '../public/telegram.svg';
 import tiktokImage from '../public/tiktok.svg';
-import viberImage from '../public/viber.svg';
-
 export interface SocialMediaLink {
   title: string;
   href: string;
@@ -17,7 +15,6 @@ export interface SocialMediaLinks {
   facebookLink: SocialMediaLink;
   telegramLink: SocialMediaLink;
   messengerLink: SocialMediaLink;
-  viberLink: SocialMediaLink;
   tiktokLink: SocialMediaLink;
 }
 
@@ -39,10 +36,6 @@ export function getSocialMediaProps(
     {
       ...socialMediaLinks.messengerLink,
       image: messengerImage,
-    },
-    {
-      ...socialMediaLinks.viberLink,
-      image: viberImage,
     },
     {
       ...socialMediaLinks.tiktokLink,
