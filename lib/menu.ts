@@ -18,6 +18,7 @@ export interface CustomMenuOverlayStrings extends MenuOverlayStrings {
   about: string;
   feedback_title: string;
   feedback: string;
+  services: string;
 }
 
 export function getFooterItems(
@@ -26,6 +27,11 @@ export function getFooterItems(
 ): MenuOverlayItem[] {
   let items: MenuOverlayItem[] = [];
   items.push({ key: 'home', label: strings.home, href: '/' });
+  items.push({
+    key: 'services',
+    label: strings.services, // Make sure this string is defined in your strings object
+    href: '/#service-map',
+  });
   for (const category of categories as ZendeskCategory[]) {
     if (category?.id === 10159110917917) {
       items.push({
@@ -50,6 +56,11 @@ export function getMenuItems(
 ): MenuOverlayItem[] {
   let items: MenuOverlayItem[] = [];
   items.push({ key: 'home', label: strings.home, href: '/' });
+  items.push({
+    key: 'services',
+    label: strings.services, // Make sure this string is defined in your strings object
+    href: '/#service-map',
+  });
   items.push({
     key: 'Feedback Survey',
     label: strings.feedback_title,
