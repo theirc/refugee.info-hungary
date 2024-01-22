@@ -29,6 +29,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'refugeeinfohungary.zendesk.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'directus-irc.azurewebsites.net',
+      },
     ],
   },
   publicRuntimeConfig: {
